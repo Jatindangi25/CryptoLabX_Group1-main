@@ -58,3 +58,83 @@ Test results:[0m
 [91m>> Issue: [B322:blacklist] The input method in Python 2 will read from standard input, evaluate and run the resulting string as python source code. This is similar, though in many ways worse, then using eval. On Python 2, use raw_input instead, input is safe in Python 3.
    Severity: High   Confidence: High
    Location: main.py:160
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b322-input[0m
+159	    old_pin = input("Enter old PIN: ")
+160	    new_pin = input("Enter new PIN: ")
+161	
+
+--------------------------------------------------
+[91m>> Issue: [B322:blacklist] The input method in Python 2 will read from standard input, evaluate and run the resulting string as python source code. This is similar, though in many ways worse, then using eval. On Python 2, use raw_input instead, input is safe in Python 3.
+   Severity: High   Confidence: High
+   Location: main.py:208
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b322-input[0m
+207	
+208	        choice = input("Enter choice: ")
+209	
+
+--------------------------------------------------
+[95m
+Code scanned:[0m
+	Total lines of code: 161
+	Total lines skipped (#nosec): 0
+[95m
+Run metrics:[0m
+	Total issues (by severity):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 0.0
+		High: 7.0
+	Total issues (by confidence):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 0.0
+		High: 7.0
+[95mFiles skipped (0):[0m
+[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX/secure_application/src[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX/secure_application/src[00m$ clear
+[?2004l[H[2J[3J[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX/secure_application/src[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX/secure_application/src[00m$ cd ../outpit[K[Kuts
+[?2004l[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX/secure_application/outputs[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX/secure_application/outputs[00m$ touch outpui[Kt.txt
+[?2004l[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX/secure_application/outputs[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX/secure_application/outputs[00m$ clear
+[?2004l[H[2J[3J[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX/secure_application/outputs[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX/secure_application/outputs[00m$ clea[K[K[K[Kcd ../../..
+[?2004l[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~[00m$ cd Crypyt[K[Kti[KoLabX
+[?2004l[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX[00m$ clear
+[?2004l[H[2J[3J[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX[00m$ git status
+[?2004lOn branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31m.gitignore[m
+	[31mREADME.md[m
+	[31manalysis/[m
+	[31mattacks/[m
+	[31mdatasets/[m
+	[31mdocs/[m
+	[31mg1_nikhil_2024ucp1273.txt[m
+	[31mmain.py[m
+	[31mmath/[m
+	[31mmodern/[m
+	[31moutputs/[m
+	[31msecure_application/[m
+	[31mtests/[m
+	[31mthis.log[m
+	[31mthis.txt[m
+	[31mutils/[m
+	[31mvunerable.py[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX[00m$ git add .
+[?2004l[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX[00m$ git commit '[K-, [K[Km ""w"r"o"t" "[1P"e"r"[1P" "a"t"m" "d"e"m"o"n"s"t"r"a"rt"i"[1P"[1P"[1P"t"i"o"n" "p"r"o"g"r"a"m"[C
+[?2004l[main (root-commit) d48700b] wrote atm demonstration program
+ 35 files changed, 1139 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 README.md
+ create mode 100644 analysis/ph.txt
+ create mode 100644 attacks/attack.txt
+ create mode 100644 datasets/f1.txt
+ create mode 100644 datasets/f2.txt
+ create mode 100644 datasets/f3.txt
+ create mode 100644 datasets/f4.txt
+ create mode 100644 datasets/f5.txt
+ create mode 100644 datasets/sample.txt
+ create

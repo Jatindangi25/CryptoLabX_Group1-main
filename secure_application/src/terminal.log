@@ -349,4 +349,68 @@ Run metrics:[0m
 No commits yet
 
 Untracked files:
-  (use "g
+  (use "git add <file>..." to include in what will be committed)
+	[31m.gitignore[m
+	[31mREADME.md[m
+	[31manalysis/[m
+	[31mattacks/[m
+	[31mdatasets/[m
+	[31mdocs/[m
+	[31mg1_nikhil_2024ucp1273.txt[m
+	[31mmain.py[m
+	[31mmath/[m
+	[31mmodern/[m
+	[31moutputs/[m
+	[31msecure_application/[m
+	[31mtests/[m
+	[31mthis.log[m
+	[31mthis.txt[m
+	[31mutils/[m
+	[31mvunerable.py[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX[00m$ git add .
+[?2004l[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX[00m$ git commit '[K-, [K[Km ""w"r"o"t" "[1P"e"r"[1P" "a"t"m" "d"e"m"o"n"s"t"r"a"rt"i"[1P"[1P"[1P"t"i"o"n" "p"r"o"g"r"a"m"[C
+[?2004l[main (root-commit) d48700b] wrote atm demonstration program
+ 35 files changed, 1139 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 README.md
+ create mode 100644 analysis/ph.txt
+ create mode 100644 attacks/attack.txt
+ create mode 100644 datasets/f1.txt
+ create mode 100644 datasets/f2.txt
+ create mode 100644 datasets/f3.txt
+ create mode 100644 datasets/f4.txt
+ create mode 100644 datasets/f5.txt
+ create mode 100644 datasets/sample.txt
+ create mode 100644 docs/docs.txt
+ create mode 100644 g1_nikhil_2024ucp1273.txt
+ create mode 100644 main.py
+ create mode 100644 math/math.txt
+ create mode 100644 modern/modern.txt
+ create mode 100644 outputs/execution.log
+ create mode 100644 outputs/terminal.log
+ create mode 100644 secure_application/README.md
+ create mode 100644 secure_application/outputs/output.txt
+ create mode 100644 secure_application/reports/report14Aug.txt
+ create mode 100644 secure_application/sast/sast_log.log
+ create mode 100644 secure_application/screenshots/Pasted image (2).png
+ create mode 100644 secure_application/screenshots/Pasted image (3).png
+ create mode 100644 secure_application/screenshots/Pasted image (4).png
+ create mode 100644 secure_application/screenshots/Pasted image.png
+ create mode 100644 secure_application/screenshots/Screenshot from 2026-08-14 15-13-27.png
+ create mode 100644 secure_application/src/atm.db
+ create mode 100644 secure_application/src/main.py
+ create mode 100644 secure_application/src/terminal.log
+ create mode 100644 secure_application/testcases/assign3.txt
+ create mode 100644 tests/tests.txt
+ create mode 100644 this.log
+ create mode 100644 this.txt
+ create mode 100644 utils/utils.txt
+ create mode 100644 vunerable.py
+[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX[00m$ git commit -m "wrote atm demonstration program"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"o"u"t"["p"[1P"[1P"[1P"[1P"[1P"m"a"d"e" "r"e"p"r"t" "[1P"[1P"[1P"o"r"t" "o"f" "a"t"m" "w"o"r"k"i"n"g" "a"n"d" "r"e"a"d"n"e"[1P"[1P"m"e" "[1P"[C[Cu readme"[1P readme"[C readme"i readme"[1P readme"u readme"p readme"d readme"a readme"t readme"e readme"[C readme"d readme"[1P readme"[1Preadme"d readme"[C readme"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kgit commit -m "made report of atm working and updated  readme"[1Preadme"[C[C[C[C[C[C[C[C
+[?2004lOn branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[
