@@ -1,0 +1,60 @@
+Script started on 2026-08-14 15:26:06+05:30 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="152" LINES="37"]
+[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX/secure_application/sast[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX/secure_application/sast[00m$ band[K[K[Kcd[K[K[Kcd ../src
+[?2004l[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX/secure_application/src[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX/secure_application/src[00m$ bandit main.py
+[?2004l[main]	INFO	profile include tests: None
+[main]	INFO	profile exclude tests: None
+[main]	INFO	cli include tests: None
+[main]	INFO	cli exclude tests: None
+[main]	INFO	running on Python 3.12.3
+[node_visitor]	INFO	Unable to find qualified name for module: main.py
+[95mRun started:2026-08-14 09:56:28.694579[0m
+[95m
+Test results:[0m
+[91m>> Issue: [B322:blacklist] The input method in Python 2 will read from standard input, evaluate and run the resulting string as python source code. This is similar, though in many ways worse, then using eval. On Python 2, use raw_input instead, input is safe in Python 3.
+   Severity: High   Confidence: High
+   Location: main.py:30
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b322-input[0m
+29	
+30	    account_id = input("Enter Account ID: ")
+31	    pin = input("Enter PIN: ")
+
+--------------------------------------------------
+[91m>> Issue: [B322:blacklist] The input method in Python 2 will read from standard input, evaluate and run the resulting string as python source code. This is similar, though in many ways worse, then using eval. On Python 2, use raw_input instead, input is safe in Python 3.
+   Severity: High   Confidence: High
+   Location: main.py:31
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b322-input[0m
+30	    account_id = input("Enter Account ID: ")
+31	    pin = input("Enter PIN: ")
+32	
+
+--------------------------------------------------
+[91m>> Issue: [B322:blacklist] The input method in Python 2 will read from standard input, evaluate and run the resulting string as python source code. This is similar, though in many ways worse, then using eval. On Python 2, use raw_input instead, input is safe in Python 3.
+   Severity: High   Confidence: High
+   Location: main.py:80
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b322-input[0m
+79	
+80	    amount = input("Enter withdrawal amount: ")
+81	
+
+--------------------------------------------------
+[91m>> Issue: [B322:blacklist] The input method in Python 2 will read from standard input, evaluate and run the resulting string as python source code. This is similar, though in many ways worse, then using eval. On Python 2, use raw_input instead, input is safe in Python 3.
+   Severity: High   Confidence: High
+   Location: main.py:122
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b322-input[0m
+121	
+122	    amount = input("Enter deposit amount: ")
+123	
+
+--------------------------------------------------
+[91m>> Issue: [B322:blacklist] The input method in Python 2 will read from standard input, evaluate and run the resulting string as python source code. This is similar, though in many ways worse, then using eval. On Python 2, use raw_input instead, input is safe in Python 3.
+   Severity: High   Confidence: High
+   Location: main.py:159
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b322-input[0m
+158	
+159	    old_pin = input("Enter old PIN: ")
+160	    new_pin = input("Enter new PIN: ")
+
+--------------------------------------------------
+[91m>> Issue: [B322:blacklist] The input method in Python 2 will read from standard input, evaluate and run the resulting string as python source code. This is similar, though in many ways worse, then using eval. On Python 2, use raw_input instead, input is safe in Python 3.
+   Severity: High   Confidence: High
+   Location: main.py:160

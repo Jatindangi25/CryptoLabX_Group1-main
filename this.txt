@@ -1,0 +1,38 @@
+
+Test results:
+>> Issue: [B303:blacklist] Use of insecure MD2, MD4, MD5, or SHA1 hash function.
+   Severity: Medium   Confidence: High
+   Location: vunerable.py:13
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b303-md5
+12	def verify_password(stored_password, provided_password):
+13	    hashed_provided = hashlib.md5(provided_password.encode()).hexdigest()
+14	    return stored_password == hashed_provided
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 17
+	Total lines skipped (#nosec): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 1.0
+		High: 0.0
+	Total issues (by confidence):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 0.0
+		High: 1.0
+Files skipped (0):
+
+learnings: how to analyse and find vulnerability in python code using bandit without executing code
+bandit is a sast tool that is exclusively used for python 
+it uses ast library of python itself to parse code node by node
+it gave outputs with severity and confidence score
+severity : low - allow app to open for all address (0.0.0.0)
+
+medium: Using the broken MD5 or SHA1 algorithms for hashing cryptographic keys
+
+high : database injection or os.system() call using untrusted inputs

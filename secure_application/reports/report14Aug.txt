@@ -1,0 +1,162 @@
+## 1. Objective
+
+The objective of this practical was to develop a simple ATM system that simulates basic ATM operations and demonstrate three common security vulnerabilities:
+
+1. SQL Injection
+2. Information Leakage Through Error Messages
+3. Improper Input Validation
+
+Bandit was also used as a static security analysis tool to scan the Python source code.
+
+## 2. ATM System Functionality
+
+The ATM application was implemented using Python and SQLite. The application provides the following basic functionalities:
+
+* User login using Account ID and PIN
+* Balance inquiry
+* Withdrawal
+* Deposit
+* PIN change
+* Logout
+
+A local SQLite database (`atm.db`) was automatically created by the program. It contains an `accounts` table with Account ID, PIN, and balance.
+
+A demo account was created:
+
+* Account ID: `1001`
+* PIN: `1234`
+* Balance: `5000`
+
+## 3. Vulnerability 1 – SQL Injection
+
+### Vulnerable Code
+
+The login query was constructed by directly concatenating user input:
+
+```python
+query = (
+    "SELECT * FROM accounts "
+    "WHERE id='" + account_id +
+    "' AND pin='" + pin + "'"
+)
+```
+
+### Why is it vulnerable?
+
+User input is inserted directly into the SQL query without using parameterized queries. An attacker can therefore manipulate the SQL statement by entering specially crafted input.
+
+For example:
+
+```text
+Account ID: ' OR '1'='1' --
+PIN: anything
+```
+
+This can modify the SQL condition and potentially bypass authentication.
+
+### Impact
+
+An attacker may gain unauthorized access to an account without knowing the correct credentials.
+
+### Prevention
+
+Use parameterized SQL queries instead of string concatenation:
+
+```python
+cursor.execute(
+    "SELECT * FROM accounts WHERE id=? AND pin=?",
+    (account_id, pin)
+)
+```
+
+## 4. Vulnerability 2 – Information Leakage Through Error Messages
+
+### Vulnerable Code
+
+The application displays the actual exception to the user:
+
+```python
+except Exception as e:
+    print("Database Error:", e)
+```
+
+### Why is it vulnerable?
+
+Detailed error messages can reveal internal information about the application, database, tables, queries, or Python implementation.
+
+For example, an error might reveal:
+
+```text
+Database Error: no such table: accounts
+```
+
+### Impact
+
+An attacker can use this information to understand the internal structure of the application and potentially find additional vulnerabilities.
+
+### Prevention
+
+Users should receive a generic message:
+
+```text
+An error occurred. Please try again.
+```
+
+while the detailed exception should be recorded in a secure application log.
+
+## 5. Vulnerability 3 – Improper Input Validation
+
+The ATM accepts transaction amounts from the user using:
+
+```python
+amount = input("Enter withdrawal amount: ")
+amount = float(amount)
+```
+
+Although basic checks were implemented, the application does not perform comprehensive validation of all possible input values.
+
+For example, invalid or unusual values can cause exceptions or unexpected behavior.
+
+### Why is it vulnerable?
+
+Financial applications should strictly validate:
+
+* Input type
+* Positive/negative values
+* Maximum transaction amount
+* Decimal precision
+* Finite numeric values
+* Empty or malformed input
+
+### Impact
+
+Improper validation can cause incorrect transactions, application errors, or unexpected behavior.
+
+### Prevention
+
+Validate the input before processing the transaction and reject values that do not satisfy the required conditions.
+
+## 6. Bandit Analysis
+
+Bandit was used to scan the Python source code:
+
+```bash
+bandit atm_vulnerable.py
+```
+
+Bandit reported:
+
+```text
+B322: input
+```
+
+This warning relates to the use of `input()` under Python 2 semantics. Since the application is being executed using Python 3, this particular warning does not represent the SQL Injection vulnerability.
+
+Bandit is a static-analysis tool and does not detect every type of vulnerability. In particular, it may not automatically identify the SQL injection in this simple application. Therefore, the vulnerabilities were demonstrated through both source-code analysis and controlled testing of the local ATM application.
+
+## 7. Conclusion
+
+A simple ATM application was successfully developed using Python and SQLite. Three vulnerabilities were demonstrated: SQL Injection, Information Leakage Through Error Messages, and Improper Input Validation.
+
+The practical shows that accepting user input without proper validation, constructing SQL queries using string concatenation, and displaying detailed internal errors can introduce serious security risks. Appropriate security controls such as parameterized queries, strict input validation, and safe error handling should be implemented in a real ATM or banking application.
+

@@ -1,0 +1,18 @@
+sql injection 
+TC-SQL-01
+Account ID: ' OR '1'='1' --
+PIN: anything
+Result: Authentication bypass
+
+Information Leakage
+
+TC-ERR-01
+Withdrawal Amount: abc
+Result: Internal Python exception displayed
+
+
+Improper Input Validation
+
+TC-VAL-01
+Withdrawal Amount: -500
+Result: Negative amount should be rejected

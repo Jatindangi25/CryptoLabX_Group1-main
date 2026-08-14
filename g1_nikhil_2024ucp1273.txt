@@ -1,0 +1,106 @@
+mnitcse@mnitcse-OptiPlex-5040:~/CryptoLabX$ sudo apt install python3-bandit
+[sudo] password for mnitcse:
+
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  python3-git python3-gitdb python3-importlib-metadata python3-more-itertools
+  python3-pbr python3-smmap python3-stevedore python3-zipp
+
+Suggested packages:
+  python-git-doc
+
+The following NEW packages will be installed:
+  python3-bandit python3-git python3-gitdb python3-importlib-metadata
+  python3-more-itertools python3-pbr python3-smmap python3-stevedore
+  python3-zipp
+
+0 upgraded, 9 newly installed, 0 to remove and 69 not upgraded.
+Need to get 436 kB of archives.
+After this operation, 2,281 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu noble/universe amd64 python3-smmap all 6.0.0-1 [20.5 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble/universe amd64 python3-gitdb all 4.0.11-1 [46.2 kB]
+Get:3 http://archive.ubuntu.com/ubuntu noble/universe amd64 python3-git all 3.1.37-3 [138 kB]
+Get:4 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-more-itertools all 10.2.0-1 [52.9 kB]
+Get:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-zipp all 1.0.0-6ubuntu0.1 [6,774 B]
+Get:6 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-importlib-metadata all 4.12.0-1 [17.8 kB]
+Get:7 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-pbr all 5.11.1-0ubuntu1 [66.5 kB]
+Get:8 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-stevedore all 1:5.1.0-0ubuntu1 [21.0 kB]
+Get:9 http://archive.ubuntu.com/ubuntu noble/universe amd64 python3-bandit all 1.6.2-3 [66.6 kB]
+Fetched 436 kB in 1s (298 kB/s)
+Selecting previously unselected package python3-smmap.
+(Reading database ... 222666 files and directories currently installed.)
+Preparing to unpack .../0-python3-smmap_6.0.0-1_all.deb ...
+Unpacking python3-smmap (6.0.0-1) ...
+Selecting previously unselected package python3-gitdb.
+Preparing to unpack .../1-python3-gitdb_4.0.11-1_all.deb ...
+Unpacking python3-gitdb (4.0.11-1) ...
+Selecting previously unselected package python3-git.
+Preparing to unpack .../2-python3-git_3.1.37-3_all.deb ...
+Unpacking python3-git (3.1.37-3) ...
+Selecting previously unselected package python3-more-itertools.
+Preparing to unpack .../3-python3-more-itertools_10.2.0-1_all.deb ...
+Unpacking python3-more-itertools (10.2.0-1) ...
+Selecting previously unselected package python3-zipp.
+Preparing to unpack .../4-python3-zipp_1.0.0-6ubuntu0.1_all.deb ...
+Unpacking python3-zipp (1.0.0-6ubuntu0.1) ...
+Selecting previously unselected package python3-importlib-metadata.
+Preparing to unpack .../5-python3-importlib-metadata_4.12.0-1_all.deb ...
+Unpacking python3-importlib-metadata (4.12.0-1) ...
+Selecting previously unselected package python3-pbr.
+Preparing to unpack .../6-python3-pbr_5.11.1-0ubuntu1_all.deb ...
+Unpacking python3-pbr (5.11.1-0ubuntu1) ...
+Selecting previously unselected package python3-stevedore.
+Preparing to unpack .../7-python3-stevedore_1%3a5.1.0-0ubuntu1_all.deb ...
+Unpacking python3-stevedore (1:5.1.0-0ubuntu1) ...
+Selecting previously unselected package python3-bandit.
+Preparing to unpack .../8-python3-bandit_1.6.2-3_all.deb ...
+Unpacking python3-bandit (1.6.2-3) ...
+Setting up python3-more-itertools (10.2.0-1) ...
+Setting up python3-pbr (5.11.1-0ubuntu1) ...
+Setting up python3-zipp (1.0.0-6ubuntu0.1) ...
+Setting up python3-smmap (6.0.0-1) ...
+Setting up python3-importlib-metadata (4.12.0-1) ...
+Setting up python3-gitdb (4.0.11-1) ...
+Setting up python3-git (3.1.37-3) ...
+Setting up python3-stevedore (1:5.1.0-0ubuntu1) ...
+Setting up python3-bandit (1.6.2-3) ...
+
+
+
+
+Script started on 2026-08-07 15:33:05+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX[00m$ exitbandit vunerable.py -f txt -o g1_nikhil_2024ucp1273.txt[A
+]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX[00m$ exit[K
+
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cbandit vunerable.py g1_nikhil_2024ucp1273.txt[A
+]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX[00m$ exit[K
+
+Run started:2026-08-07 10:02:16.113177
+Code scanned:[0m
+	Total lines of code: 17
+	Total lines skipped (#nosec): 0
+[95m
+Run metrics:[0m
+	Total issues (by severity):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 1.0
+		High: 0.0
+	Total issues (by confidence):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 0.0
+		High: 1.0
+[95mFiles skipped (0):[0m
+[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX[00m$ exit
+[?2004l
+exit
+
+Script done on 2026-08-07 15:33:14+05:30 [COMMAND_EXIT_CODE="1"]
+
+
+
+

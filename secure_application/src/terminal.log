@@ -1,0 +1,352 @@
+Script started on 2026-08-14 14:57:56+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX/secure_application/src[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX/secure_application/src[00m$ python3 main. py
+[?2004l
+========== ATM ==========
+1. Login
+2. Balance Inquiry
+3. Withdraw
+4. Deposit
+5. Change PIN
+6. Logout
+7. Exit
+Enter choice: 1
+Enter Account ID: ' OR '1'='1' --
+Enter PIN: 1234    2345
+Login successful!
+
+========== ATM ==========
+1. Login
+2. Balance Inquiry
+3. Withdraw
+4. Deposit
+5. Change PIN
+6. Logout
+7. Exit
+Enter choice: 1
+Enter Account ID: 1001
+Enter PIN: 1234    2345
+Invalid Account ID or PIN.
+
+========== ATM ==========
+1. Login
+2. Balance Inquiry
+3. Withdraw
+4. Deposit
+5. Change PIN
+6. Logout
+7. Exit
+Enter choice: ^[[A    1
+Enter Account ID: 1001
+Enter PIN: 1234
+Login successful!
+
+========== ATM ==========
+1. Login
+2. Balance Inquiry
+3. Withdraw
+4. Deposit
+5. Change PIN
+6. Logout
+7. Exit
+Enter choice: 2
+Current Balance: 5000.0
+
+========== ATM ==========
+1. Login
+2. Balance Inquiry
+3. Withdraw
+4. Deposit
+5. Change PIN
+6. Logout
+7. Exit
+Enter choice: 3
+Enter withdrawal amount: 100
+Withdrawal successful.
+Remaining Balance: 4900.0
+
+========== ATM ==========
+1. Login
+2. Balance Inquiry
+3. Withdraw
+4. Deposit
+5. Change PIN
+6. Logout
+7. Exit
+Enter choice: 3
+Enter withdrawal amount: nikhil
+Withdrawal Error: could not convert string to float: 'nikhil'
+
+========== ATM ==========
+1. Login
+2. Balance Inquiry
+3. Withdraw
+4. Deposit
+5. Change PIN
+6. Logout
+7. Exit
+Enter choice: inf
+Invalid menu choice.
+
+========== ATM ==========
+1. Login
+2. Balance Inquiry
+3. Withdraw
+4. Deposit
+5. Change PIN
+6. Logout
+7. Exit
+Enter choice: 3
+Enter withdrawal amount: inf
+Insufficient balance.
+
+========== ATM ==========
+1. Login
+2. Balance Inquiry
+3. Withdraw
+4. Deposit
+5. Change PIN
+6. Logout
+7. Exit
+Enter choice: 4
+Enter deposit amount: 300
+Deposit successful.
+New Balance: 5200.0
+
+========== ATM ==========
+1. Login
+2. Balance Inquiry
+3. Withdraw
+4. Deposit
+5. Change PIN
+6. Logout
+7. Exit
+Enter choice: 5
+Enter old PIN: 1234
+Enter new PIN: 2345
+PIN changed successfully.
+
+========== ATM ==========
+1. Login
+2. Balance Inquiry
+3. Withdraw
+4. Deposit
+5. Change PIN
+6. Logout
+7. Exit
+Enter choice: 6
+Logged out successfully.
+
+========== ATM ==========
+1. Login
+2. Balance Inquiry
+3. Withdraw
+4. Deposit
+5. Change PIN
+6. Logout
+7. Exit
+Enter choice: 7
+Thank you for using ATM.
+[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX/secure_application/src[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX/secure_application/src[00m$ bandit main.p y
+[?2004l[main]	INFO	profile include tests: None
+[main]	INFO	profile exclude tests: None
+[main]	INFO	cli include tests: None
+[main]	INFO	cli exclude tests: None
+[main]	INFO	running on Python 3.12.3
+[node_visitor]	INFO	Unable to find qualified name for module: main.py
+[95mRun started:2026-08-14 09:38:08.978584[0m
+[95m
+Test results:[0m
+[91m>> Issue: [B322:blacklist] The input method in Python 2 will read from standard input, evaluate and run the resulting string as python source code. This is similar, though in many ways worse, then using eval. On Python 2, use raw_input instead, input is safe in Python 3.
+   Severity: High   Confidence: High
+   Location: main.py:30
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b322-input[0m
+29	
+30	    account_id = input("Enter Account ID: ")
+31	    pin = input("Enter PIN: ")
+
+--------------------------------------------------
+[91m>> Issue: [B322:blacklist] The input method in Python 2 will read from standard input, evaluate and run the resulting string as python source code. This is similar, though in many ways worse, then using eval. On Python 2, use raw_input instead, input is safe in Python 3.
+   Severity: High   Confidence: High
+   Location: main.py:31
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b322-input[0m
+30	    account_id = input("Enter Account ID: ")
+31	    pin = input("Enter PIN: ")
+32	
+
+--------------------------------------------------
+[91m>> Issue: [B322:blacklist] The input method in Python 2 will read from standard input, evaluate and run the resulting string as python source code. This is similar, though in many ways worse, then using eval. On Python 2, use raw_input instead, input is safe in Python 3.
+   Severity: High   Confidence: High
+   Location: main.py:81
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b322-input[0m
+80	
+81	    amount = input("Enter withdrawal amount: ")
+82	
+
+--------------------------------------------------
+[91m>> Issue: [B322:blacklist] The input method in Python 2 will read from standard input, evaluate and run the resulting string as python source code. This is similar, though in many ways worse, then using eval. On Python 2, use raw_input instead, input is safe in Python 3.
+   Severity: High   Confidence: High
+   Location: main.py:123
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b322-input[0m
+122	
+123	    amount = input("Enter deposit amount: ")
+124	
+
+--------------------------------------------------
+[91m>> Issue: [B322:blacklist] The input method in Python 2 will read from standard input, evaluate and run the resulting string as python source code. This is similar, though in many ways worse, then using eval. On Python 2, use raw_input instead, input is safe in Python 3.
+   Severity: High   Confidence: High
+   Location: main.py:160
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b322-input[0m
+159	
+160	    old_pin = input("Enter old PIN: ")
+161	    new_pin = input("Enter new PIN: ")
+
+--------------------------------------------------
+[91m>> Issue: [B322:blacklist] The input method in Python 2 will read from standard input, evaluate and run the resulting string as python source code. This is similar, though in many ways worse, then using eval. On Python 2, use raw_input instead, input is safe in Python 3.
+   Severity: High   Confidence: High
+   Location: main.py:161
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b322-input[0m
+160	    old_pin = input("Enter old PIN: ")
+161	    new_pin = input("Enter new PIN: ")
+162	
+
+--------------------------------------------------
+[91m>> Issue: [B322:blacklist] The input method in Python 2 will read from standard input, evaluate and run the resulting string as python source code. This is similar, though in many ways worse, then using eval. On Python 2, use raw_input instead, input is safe in Python 3.
+   Severity: High   Confidence: High
+   Location: main.py:209
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b322-input[0m
+208	
+209	        choice = input("Enter choice: ")
+210	
+
+--------------------------------------------------
+[95m
+Code scanned:[0m
+	Total lines of code: 161
+	Total lines skipped (#nosec): 0
+[95m
+Run metrics:[0m
+	Total issues (by severity):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 0.0
+		High: 7.0
+	Total issues (by confidence):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 0.0
+		High: 7.0
+[95mFiles skipped (0):[0m
+[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX/secure_application/src[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX/secure_application/src[00m$ [K]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX/secure_application/src[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX/secure_application/src[00m$ [K]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX/secure_application/src[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX/secure_application/src[00m$ c[Kclear[K[K[K[K[Kcd rre[K[K[K..
+[?2004l[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX/secure_application[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX/secure_application[00m$ cd reports
+[?2004l[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX/secure_application/reports[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX/secure_application/reports[00m$ touch report [K.txt
+[?2004l[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX/secure_application/reports[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX/secure_application/reports[00m$ teste[Kcas [Ke [K[K[K[K[K[K[K[K[KC D[K[K[K [Kcd ,[K../testcases
+[?2004l[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX/secure_application/testcases[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX/secure_application/testcases[00m$ touch assign3.txt
+[?2004l[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX/secure_application/testcases[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX/secure_application/testcases[00m$ as[K[Ksaas[K[K[K[Kcs [K[Kd ../sast
+[?2004l[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX/secure_application/sast[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX/secure_application/sast[00m$ clear
+[?2004l[H[2J[3J[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX/secure_application/sast[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX/secure_application/sast[00m$ script sast_log.log
+[?2004lScript started, output log file is 'sast_log.log'.
+[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX/secure_application/sast[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX/secure_application/sast[00m$ band[K[K[Kcd[K[K[Kcd ../src
+[?2004l[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX/secure_application/src[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX/secure_application/src[00m$ bandit main.py
+[?2004l[main]	INFO	profile include tests: None
+[main]	INFO	profile exclude tests: None
+[main]	INFO	cli include tests: None
+[main]	INFO	cli exclude tests: None
+[main]	INFO	running on Python 3.12.3
+[node_visitor]	INFO	Unable to find qualified name for module: main.py
+[95mRun started:2026-08-14 09:56:28.694579[0m
+[95m
+Test results:[0m
+[91m>> Issue: [B322:blacklist] The input method in Python 2 will read from standard input, evaluate and run the resulting string as python source code. This is similar, though in many ways worse, then using eval. On Python 2, use raw_input instead, input is safe in Python 3.
+   Severity: High   Confidence: High
+   Location: main.py:30
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b322-input[0m
+29	
+30	    account_id = input("Enter Account ID: ")
+31	    pin = input("Enter PIN: ")
+
+--------------------------------------------------
+[91m>> Issue: [B322:blacklist] The input method in Python 2 will read from standard input, evaluate and run the resulting string as python source code. This is similar, though in many ways worse, then using eval. On Python 2, use raw_input instead, input is safe in Python 3.
+   Severity: High   Confidence: High
+   Location: main.py:31
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b322-input[0m
+30	    account_id = input("Enter Account ID: ")
+31	    pin = input("Enter PIN: ")
+32	
+
+--------------------------------------------------
+[91m>> Issue: [B322:blacklist] The input method in Python 2 will read from standard input, evaluate and run the resulting string as python source code. This is similar, though in many ways worse, then using eval. On Python 2, use raw_input instead, input is safe in Python 3.
+   Severity: High   Confidence: High
+   Location: main.py:80
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b322-input[0m
+79	
+80	    amount = input("Enter withdrawal amount: ")
+81	
+
+--------------------------------------------------
+[91m>> Issue: [B322:blacklist] The input method in Python 2 will read from standard input, evaluate and run the resulting string as python source code. This is similar, though in many ways worse, then using eval. On Python 2, use raw_input instead, input is safe in Python 3.
+   Severity: High   Confidence: High
+   Location: main.py:122
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b322-input[0m
+121	
+122	    amount = input("Enter deposit amount: ")
+123	
+
+--------------------------------------------------
+[91m>> Issue: [B322:blacklist] The input method in Python 2 will read from standard input, evaluate and run the resulting string as python source code. This is similar, though in many ways worse, then using eval. On Python 2, use raw_input instead, input is safe in Python 3.
+   Severity: High   Confidence: High
+   Location: main.py:159
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b322-input[0m
+158	
+159	    old_pin = input("Enter old PIN: ")
+160	    new_pin = input("Enter new PIN: ")
+
+--------------------------------------------------
+[91m>> Issue: [B322:blacklist] The input method in Python 2 will read from standard input, evaluate and run the resulting string as python source code. This is similar, though in many ways worse, then using eval. On Python 2, use raw_input instead, input is safe in Python 3.
+   Severity: High   Confidence: High
+   Location: main.py:160
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b322-input[0m
+159	    old_pin = input("Enter old PIN: ")
+160	    new_pin = input("Enter new PIN: ")
+161	
+
+--------------------------------------------------
+[91m>> Issue: [B322:blacklist] The input method in Python 2 will read from standard input, evaluate and run the resulting string as python source code. This is similar, though in many ways worse, then using eval. On Python 2, use raw_input instead, input is safe in Python 3.
+   Severity: High   Confidence: High
+   Location: main.py:208
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b322-input[0m
+207	
+208	        choice = input("Enter choice: ")
+209	
+
+--------------------------------------------------
+[95m
+Code scanned:[0m
+	Total lines of code: 161
+	Total lines skipped (#nosec): 0
+[95m
+Run metrics:[0m
+	Total issues (by severity):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 0.0
+		High: 7.0
+	Total issues (by confidence):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 0.0
+		High: 7.0
+[95mFiles skipped (0):[0m
+[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX/secure_application/src[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX/secure_application/src[00m$ clear
+[?2004l[H[2J[3J[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX/secure_application/src[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX/secure_application/src[00m$ cd ../outpit[K[Kuts
+[?2004l[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX/secure_application/outputs[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX/secure_application/outputs[00m$ touch outpui[Kt.txt
+[?2004l[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX/secure_application/outputs[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX/secure_application/outputs[00m$ clear
+[?2004l[H[2J[3J[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX/secure_application/outputs[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX/secure_application/outputs[00m$ clea[K[K[K[Kcd ../../..
+[?2004l[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~[00m$ cd Crypyt[K[Kti[KoLabX
+[?2004l[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX[00m$ clear
+[?2004l[H[2J[3J[?2004h]0;mnitcse@mnitcse-OptiPlex-5040: ~/CryptoLabX[01;32mmnitcse@mnitcse-OptiPlex-5040[00m:[01;34m~/CryptoLabX[00m$ git status
+[?2004lOn branch main
+
+No commits yet
+
+Untracked files:
+  (use "g

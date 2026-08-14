@@ -60,6 +60,7 @@ def analyze_file(filepath):
         letters = [ch.lower() for ch in text if ch.isalpha()]
         frequency = Counter(letters)
 
+
         print("----- File Analysis -----")
         print(f"Characters       : {characters}")
         print(f"Words            : {words}")
@@ -78,3 +79,5 @@ def analyze_file(filepath):
 analyze_file("datasets/sample.txt")
 if __name__ == "__main__":
     menu()
+
+
