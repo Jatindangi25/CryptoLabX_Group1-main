@@ -1,0 +1,125 @@
+REPORT
+Cryptanalysis Using Shift Cipher, Frequency Test and Chi-Square Test
+1. Introduction
+
+Cryptography is the study of techniques used to secure information by converting readable data into an unintelligible form. In this assignment, different concepts related to classical cryptography and cryptanalysis are implemented and studied.
+
+The project focuses on the Shift Cipher, along with two statistical techniques used for analysing encrypted text: the Frequency Test and the Chi-Square Test. The Shift Cipher is a substitution cipher in which every alphabetic character is shifted by a fixed number of positions. Although it is simple to implement, it is vulnerable to statistical analysis because the frequency distribution of letters is preserved to a large extent.
+
+The Frequency Test examines how frequently individual letters occur in a ciphertext and compares the results with the expected frequency of letters in a particular language. The Chi-Square Test provides a mathematical method for measuring the difference between observed and expected letter frequencies.
+
+2. Objectives
+
+The main objectives of this assignment are:
+
+To understand the working principle of the Shift Cipher.
+To implement encryption and decryption using different shift values.
+To study the frequency distribution of characters in ciphertext.
+To understand how frequency analysis can be used in cryptanalysis.
+To implement the Chi-Square statistical test.
+To compare observed and expected letter frequencies.
+To identify the most probable shift used for encryption.
+3. Shift Cipher
+
+The Shift Cipher, also known as the Caesar Cipher, is a substitution cipher in which each letter is replaced by another letter located a fixed number of positions away in the alphabet.
+
+For example, with a shift of 3:
+
+A → D
+B → E
+C → F
+
+Thus, the plaintext:
+
+HELLO
+
+becomes:
+
+KHOOR
+
+The encryption operation can be represented as:
+
+C = (P + K) mod 26
+
+where P represents the plaintext character, K represents the shift value, and C represents the ciphertext character.
+
+For decryption:
+
+P = (C - K) mod 26
+
+The modulo operation ensures that the alphabet wraps around after Z.
+
+4. Frequency Test
+
+Frequency analysis is one of the simplest techniques used to attack substitution ciphers. In normal English text, some letters occur much more frequently than others. For example, letters such as E, T, A, O, and I generally occur frequently.
+
+The program counts the occurrence of each alphabetic character in the ciphertext and calculates its frequency. The resulting distribution can then be compared with standard English letter frequencies.
+
+Since the Shift Cipher only changes the position of letters and does not change their frequency distribution, frequency analysis can provide useful information about the possible encryption key.
+
+5. Chi-Square Test
+
+The Chi-Square Test provides a statistical way to compare the observed letter frequencies of a ciphertext with expected English letter frequencies.
+
+The test uses the formula:
+
+
+
+Where:
+
+O = observed frequency
+E = expected frequency
+
+For each possible shift, the ciphertext frequencies are shifted and compared with the expected English frequencies. The shift producing the lowest Chi-Square value is generally considered the most likely key because its frequency distribution most closely matches the expected English distribution.
+
+6. Working of the Program
+
+The program first accepts the required plaintext or ciphertext and a shift value. For encryption, each alphabetic character is shifted according to the specified key. For decryption, the shift is reversed.
+
+After obtaining the ciphertext, the program performs frequency analysis by counting the occurrences of the letters A–Z. These frequencies are then used for statistical analysis.
+
+The Chi-Square Test is performed for possible shift values. The calculated Chi-Square values are compared, and the shift having the smallest value is selected as the probable encryption key.
+
+7. Testing
+
+The implementation can be tested using different plaintext messages and different shift values.
+
+Important test cases include:
+
+Encrypting a message using a known shift.
+Decrypting the ciphertext using the correct key.
+Checking encryption and decryption with shift 0.
+Testing shift values near the alphabet boundary.
+Performing frequency analysis on ciphertext.
+Applying the Chi-Square Test to identify the probable shift.
+Testing the program with spaces, numbers and punctuation.
+Testing longer text to obtain more reliable frequency results.
+8. Results
+
+The Shift Cipher successfully encrypts and decrypts text using a specified key. Frequency analysis demonstrates that the statistical characteristics of the plaintext are largely preserved after applying the Shift Cipher.
+
+The Chi-Square Test provides a systematic method for testing all possible shifts and selecting the shift that produces the frequency distribution closest to the expected English distribution. This demonstrates why simple substitution ciphers such as the Shift Cipher are not considered secure against statistical cryptanalysis.
+
+9. Limitations
+
+The accuracy of frequency analysis and the Chi-Square Test depends heavily on the length of the ciphertext. Very short messages may not contain enough characters for the observed frequencies to closely match standard English frequencies.
+
+Additionally, these techniques assume that the plaintext is approximately English text and that standard English letter-frequency statistics are applicable.
+
+10. Future Scope
+
+The project can be extended by implementing:
+
+Automatic Shift Cipher key detection.
+Frequency graphs for visual comparison.
+Support for other substitution ciphers.
+Automated plaintext recovery.
+N-gram analysis.
+Dictionary-based cryptanalysis.
+Comparison of different statistical attacks.
+A graphical user interface for encryption and cryptanalysis.
+11. Conclusion
+
+This assignment demonstrates the relationship between classical cryptography and statistical cryptanalysis. The Shift Cipher provides a simple example of encryption using substitution, while Frequency Analysis and the Chi-Square Test demonstrate how statistical properties of language can be used to attack such a cipher.
+
+Through this implementation, it can be observed that although the Shift Cipher is easy to understand and implement, its small key space and preservation of letter-frequency characteristics make it vulnerable to cryptanalysis. Therefore, modern cryptographic systems require significantly stronger algorithms and larger key spaces to provide effective security.
